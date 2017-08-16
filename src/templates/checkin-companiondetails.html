@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToPrevious()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Companion Details
+			</div>
+			<div class="col-25">
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="wizardContentContainer">
+		<p class="contentInstructionFont companionDetailsMargin text-center">Please enter the details of</br>one person fishing with you.</p>
+		<div class="list">
+			<span class="item item-input">
+				<input type="text" placeholder="Full Name" class="formText" ng-model="companion.name">
+				<i class="icon ion-ios-plus-outline placeholder-icon" on-tap="pickContact()"></i>
+			</span>
+			<span class="item item-input">
+				<input type="tel" placeholder="Mobile (e.g. 0477436824)" class="formText" ng-model="companion.mobileNumber" only-digits>
+				<i class="icon ion-ios-telephone placeholder-icon"></i>
+			</span>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="hide-on-keyboard-open">
+		<div class="wizardSubFooter bar bar-subfooter">
+			<button class="btnSubMenu marginBtm" ng-click="doCheckIn()">Next</button>
+		</div>
+		<div class="wizardMainFooter bar bar-footer row text-center">
+			<button class="btnInvisible marginBtm" ng-click="skipCompanion()">Skip</button>
+		</div>
+	</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToPrevious()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Companion
+			</div>
+			<div class="col-25">
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="wizardContentContainer">
+		<p class="wizardStepText text-center">Step 5 of 5</p>
+		<p class="contentInstructionFont companionMargin text-center">How many people will
+			<br/>be fishing with you?</p>
+		<div class="row">
+			<div class="col-25 btnPlusMinusContainer">
+				<button class="btnPlusMinus ion-minus" ng-click="reduceCompanion()"></button>
+			</div>
+			<div class="col-50 durationText durationTextMargin">
+				{{ getCompanion() }}
+			</div>
+			<div class="col-25 btnPlusMinusContainer">
+				<button class="btnPlusMinus ion-plus" ng-click="addCompanion()"></button>
+			</div>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="wizardFooterContainer">
+		<button class="btnSubMenu" ng-click="goToCompanionDetails()">Next</button>
+	</ion-footer-bar>
+</ion-view>

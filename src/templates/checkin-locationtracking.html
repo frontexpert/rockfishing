@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToPrevious()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Location Tracking
+			</div>
+			<div class="col-25">
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="wizardContentContainer">
+		<p class="wizardStepText text-center">Step 3 of 5</p>
+		<p class="contentInstructionFont locationTrackingMargin text-center">Would you like us to
+			<br/>track your location
+			<br/>every 30 minutes?</p>
+		<p class="regularDarkFont16">We will use your location information to
+			<br/>find you in the event on an emergency.</p>
+	</ion-content>
+	<ion-footer-bar>
+		<div class="wizardSubFooter bar bar-subfooter">
+			<button class="btnSubMenu marginBtm" ng-click="trackMe()">Track Me</button>
+		</div>
+		<div class="wizardMainFooter bar bar-footer row text-center">
+			<button class="btnInvisible marginBtm" ng-click="goToEmergency()">Skip</button>
+		</div>
+	</ion-footer-bar>
+</ion-view>

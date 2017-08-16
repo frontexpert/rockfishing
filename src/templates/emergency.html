@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToHome()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Emergency
+			</div>
+			<div class="col-25">
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="emergencyContainer">
+		<p class="positionTitle">Your Latitude</p>
+		<p class="positionDescription text-center" ng-bind-html="decimalToDMS(currentPosition.latitude, true)"></p>
+		<p class="positionTitle longitudeMargin">Your Longitude</p>
+		<p class="positionDescription text-center" ng-bind-html="decimalToDMS(currentPosition.longitude, false)"></p>
+        <p class="emergencyGuide text-center">In the event of an emergency,<br/>please tell the operator your<br/>latitude and longitude</p>
+	</ion-content>
+    <ion-footer-bar class="wizardFooterContainer">
+		<button class="btnEmergency" ng-click="callEmergency()">Emergency Call 000</button>
+	</ion-footer-bar>
+</ion-view>

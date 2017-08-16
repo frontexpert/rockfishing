@@ -1,0 +1,61 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col">
+				<a href="#/about">About</a>
+			</div>
+			<div class="col text-right">
+				<a href="#/profile">Profile</a>
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="contentContainer">
+		<button class="btnMenu marginBtm" ng-click="goToCheckin()" ng-if="sessionService.getCurrentState() == 0">Check In</button>
+		<div ng-if="sessionService.getCurrentState() == 1" class="checkInContainer">
+			<div class="checkInIconContainer text-center"><img src="img/Rockfishin_Pin.svg" class="checkInIcon" /></div>
+			<p>Checked in at {{ getCheckInTime() }}
+				<br/>Expected return at {{ getCheckOutTime() }}</p>
+			<button class="btnMenu btnCheckOutMargin marginTop" ng-click="doCheckOut()">Check Out</button>
+			<button class="btnMenu" ng-click="goToExtendDuration()">Extend Duration</button>
+		</div>
+		<div ng-if="sessionService.getCurrentState() == 3" class="checkInContainer">
+			<div class="warningIconContainer text-center"><img src="img/Warning_icon.svg" class="warningIcon" /></div>
+			<p>Your session is about to end.Please<br/>check out or extend the duration<br/>of your session.</p>
+			<p>Checked in at {{ getCheckInTime() }}
+				<br/>Expected return at {{ getCheckOutTime() }}</p>
+			<button class="btnMenu btnCheckOutMargin" ng-click="doCheckOut()">Check Out</button>
+			<button class="btnMenu" ng-click="goToExtendDuration()">Extend duration</button>
+		</div>
+		<div ng-if="sessionService.getCurrentState() == 4" class="checkInContainer">
+			<div class="warningIconContainer text-center"><img src="img/Warning_icon.svg" class="warningIcon" /></div>
+			<p>Your session has ended.Please
+				<br/>check out or extend the duration
+				<br/>of your session.</p>
+			<p>Checked in at {{ getCheckInTime() }}
+				<br/>Expected return at {{ getCheckOutTime() }}</p>
+			<button class="btnMenu btnCheckOutMargin" ng-click="doCheckOut()">Check Out</button>
+			<button class="btnMenu" ng-click="goToExtendDuration()">Extend duration</button>
+		</div>
+		<div ng-if="sessionService.getCurrentState() == 5" class="checkInContainer">
+			<div class="warningIconContainer text-center"><img src="img/Warning_icon.svg" class="warningIcon" /></div>
+			<p>Your location has changed.Please
+				<br/>check out or update your location</p>
+			<p>Checked in at {{ getCheckInTime() }}
+				<br/>Expected return at {{ getCheckOutTime() }}</p>
+			<button class="btnMenu btnCheckOutMargin" ng-click="doCheckOut()">Check Out</button>
+			<button class="btnMenu" ng-click="updateLocation()">Update Location</button>
+		</div>
+		<button class="btnSubMenu marginBtm" ng-click="goToSafety()">Rock Fishing Safety</button>
+		<button class="btnSubMenu" ng-click="goToEmergency()">Emergency Call</button>
+	</ion-content>
+	<ion-footer-bar class="bar-positive footerContainer">
+		<div class="row">
+			<div class="col text-center menuBorder" ng-click="goToWeather()">
+                <img ng-src="{{hasAlert == true && 'img/weather_alert_icon.svg' || 'img/weather_icon.svg'}}"/>
+			</div>
+			<div class="col text-center" ng-click="goToMap()">
+				<img src="img/map_icon.svg" />
+			</div>
+		</div>
+	</ion-footer-bar>
+</ion-view>

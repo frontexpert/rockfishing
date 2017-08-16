@@ -1,0 +1,31 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+    <ion-header-bar class="bar-positive headerContainer">
+        <div class="row">
+            <div class="col-25">
+                <a ng-click="backToHome()">Back</a>
+            </div>
+            <div class="col-50 text-center headerTitle">
+                Location
+            </div>
+            <div class="col-25 text-right">
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="weatherSearchContainer">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search for a location" class="searchInput" ng-model="searchText">
+            </label>
+        </div>
+        <ion-list>
+            <ion-item href="" ng-click="backToMyPositionWeather()">
+                <img src="img/weatherpin-icon.svg" class="locationImage" />
+                My Location
+            </ion-item>
+            <ion-item ng-repeat="item in locationList | filter: {name: searchText}" href="" ng-show="searchText.length > 0" ng-click="backToCustomPositionWeather($index)">
+                {{item.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

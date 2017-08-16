@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>buddy_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="00.-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Sign-Up" sketch:type="MSArtboardGroup" transform="translate(-324.000000, -260.000000)" fill="#A4A4A4">
+            <path d="M348,283.693457 L324,283.693457 L324,283.403537 C324,278.908224 324.61927,276.424186 325.887575,275.809554 C326.216538,275.649518 326.640982,275.406372 327.131914,275.124183 C328.535902,274.316271 330.604774,273.127984 332.916406,272.526882 C331.406501,271.103179 330.388687,268.605612 330.388687,266.218213 C330.388687,262.615469 332.749026,260 336,260 C339.250974,260 341.611313,262.639436 341.611313,266.275424 C341.611313,268.634217 340.635634,271.04133 339.137712,272.471217 C342.280063,273.19138 344.957382,274.894566 346.139484,275.646812 C347.830686,276.723384 347.983378,282.716619 347.995361,283.397352 L348,283.693457 Z" id="buddy_icon" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

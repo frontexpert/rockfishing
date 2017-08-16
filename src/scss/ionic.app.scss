@@ -1,0 +1,753 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../../lib/ionic/fonts" !default;
+
+// add required font
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../../lib/ionic/fonts/HelveticaNeueLight.eot');
+    src: url('../../lib/ionic/fonts/HelveticaNeueLight.eot') format('embedded-opentype'),
+         url('../../lib/ionic/fonts/HelveticaNeueLight.woff2') format('woff2'),
+         url('../../lib/ionic/fonts/HelveticaNeueLight.woff') format('woff'),
+         url('../../lib/ionic/fonts/HelveticaNeueLight.ttf') format('truetype'),
+         url('../../lib/ionic/fonts/HelveticaNeueLight.svg#HelveticaNeueLight') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('../../lib/ionic/fonts/HelveticaNeueMedium.eot');
+    src: url('../../lib/ionic/fonts/HelveticaNeueMedium.eot') format('embedded-opentype'),
+         url('../../lib/ionic/fonts/HelveticaNeueMedium.woff2') format('woff2'),
+         url('../../lib/ionic/fonts/HelveticaNeueMedium.woff') format('woff'),
+         url('../../lib/ionic/fonts/HelveticaNeueMedium.ttf') format('truetype'),
+         url('../../lib/ionic/fonts/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg');
+}
+
+ $font-family: "HelveticaNeueLight", "HelveticaNeueMedium", "Helvetica Neue", "Roboto", sans-serif;
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+    margin-top: 0px !important;
+}
+
+// override ionic variables
+$positive: #0D65AD !default;
+$base-background-color: #FAFAFA !default;
+
+// add new variables
+$primaryColor: #0D65AD;
+$primaryColorPressed: #0A5089;
+$primaryTextColorPressed: #B3C8DA;
+$secondaryColor: #A4A4A4;
+$secondaryTextColorPressed: #696969;
+$aliveBackground: #FAFAFA;
+$aliveDark: #101010;
+$aliveDarkGrey: #ADADAD;
+$aliveLightGrey: #C9C9CE;
+$aliveGreen: #65AD0D;
+$aliveRed: #AD0D15;
+$aliveFont: "Helvetica Neue";
+$aliveFontLight: "HelveticaNeueLight";
+$aliveFontMedium: "HelveticaNeueMedium";
+
+// CSS Implementation
+.fontStyle {
+    font-style: none;
+    text-decoration: none;
+}
+.h1Dark {
+    @extend .fontStyle;
+    font-family: $aliveFontMedium !important;
+	font-size: 24px !important;
+    color: $aliveDark;
+}
+.h1Light {
+    @extend .fontStyle;
+    font-family: $aliveFontMedium !important;
+	font-size: 24px !important;
+    color: white;
+}
+.h2Dark {
+    @extend .fontStyle;
+    font-family: $aliveFontMedium !important;
+	font-size: 20px !important;
+    color: $aliveDark;
+}
+.h2Light {
+    @extend .fontStyle;
+    font-family: $aliveFontMedium !important;
+	font-size: 20px !important;
+    color: white;
+}
+.h3Dark {
+    @extend .fontStyle;
+	font-family: $aliveFontLight !important;
+	font-size: 18px !important;
+    color: $aliveDark;
+}
+.h3Light {
+    @extend .fontStyle;
+	font-family: $aliveFontLight !important;
+	font-size: 18px !important;
+    color: white;
+}
+.h3Title {
+    @extend .fontStyle;
+	font-family: $aliveFontMedium !important;
+	font-size: 18px !important;
+    color: white;
+}
+.formText {
+    @extend .fontStyle;
+    font-family: $aliveFont !important;
+    font-size: 18px !important;
+}
+.wizardStepText {
+    @extend .fontStyle;
+    font-family: $aliveFontMedium !important;
+    font-size: 12px !important;
+    color: $secondaryColor;
+}
+.durationText {
+    @extend .fontStyle;
+    font-family: $aliveFont !important;
+    font-size: 200px !important;
+    color: $aliveDark;
+}
+.regularDarkFont16 {
+    @extend .fontStyle;
+    font-family: $aliveFont !important;
+    font-size: 16px !important;
+    color: $aliveDark;
+}
+.regularDarkFont14 {
+    @extend .fontStyle;
+    font-family: $aliveFont !important;
+    font-size: 14px !important;
+    color: $aliveDark;
+}
+
+ /* HOME SCREEN */
+ .headerContainer {
+	 padding: 31px 15px 13px 15px !important;
+     div.row {
+         padding: 0px;
+     }
+     div.col {
+         padding: 0px;
+     }
+     a {
+         @extend .h3Light;
+     }
+     .headerTitle {
+         @extend .h3Title;
+         white-space: nowrap;
+     }
+ }
+ .headerContainer.bar {
+    height: 66px !important;   
+ }
+ 
+ .footerContainer {
+     padding: 0px !important;
+     // change image spacing in home screen footer
+     div.row {
+         padding: 0px;
+     }
+     div.col {
+         padding-bottom: 13px;
+         padding-top: 13px;
+     }
+ }
+ .footerContainer.bar {
+    height: 66px !important;   
+ }
+ 
+ .contentContainer {
+    padding-top: 37px !important;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+ }
+ .menuBorder {
+    border-right-color: $primaryColorPressed;
+    border-right-style: solid;
+    border-right-width: 1px;
+ }
+.btnMenu {
+    @extend .h1Light;
+    display: block;
+    width: 100%;
+    background-color: $primaryColor;
+    height: 49px;
+    border: none;
+    moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.btnMenu:active {
+    background-color: $primaryColorPressed;
+    color: $primaryTextColorPressed;
+}
+.btnSubMenu {
+    @extend .h2Dark;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border-color: $secondaryColor;
+    border-style: solid;
+    border-width: 1px;
+    moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.btnSubMenu:active {
+    background-color: $secondaryColor;
+    color: $secondaryTextColorPressed;
+}
+.btnMenu.marginBtm {
+    margin-bottom: 20px;
+}
+.btnSubMenu.marginBtm {
+    margin-bottom: 6px;
+}
+.btnEmergency {
+    @extend .h2Light;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #ED1C2E;
+    border-color: $secondaryColor;
+    border-style: solid;
+    border-width: 1px;
+    moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.btnInvisible {
+    @extend .regularDarkFont16;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color:$aliveBackground;
+    border: none;
+}
+.checkInContainer{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #979797;
+    moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding: 15px 20px 30px 20px;
+    margin-bottom: 29px;
+    .checkInIconContainer {
+        width: 100%; 
+        height: 30px;
+    }
+    .checkInIcon {
+        width: 20px;
+        height: 30px;
+    }
+    .warningIconContainer {
+        width: 100%;
+        height: 27px;
+    }
+    .warningIcon {
+        width: 27px;
+        height: 27px;
+    }
+    .btnCheckOutMargin {
+        margin-bottom: 12px;
+    }
+    .marginTop {
+        margin-top: 20px;
+    }
+    p {
+        @extend .regularDarkFont16;
+        margin-top: 18px;
+        margin-bottom: 26px;
+        margin-left: 8px;
+        color: #2C2D2E;
+    }
+}
+
+/* CHECKIN  screens */
+.btnNext {
+    @extend .btnSubMenu;
+}
+.contentInstructionFont {
+    @extend .fontStyle;
+    font-family: $aliveFont !important;
+	font-size: 24px !important;
+    color: #101010;
+    line-height: 29px;
+}
+.contentInstructionFont.signUpMargin,
+.contentInstructionFont.companionDetailsMargin {
+    margin-top: 44px;
+    margin-bottom: 18px;
+}
+.contentInstructionFont.locationTrackingMargin,
+.contentInstructionFont.emergencyMargin,
+.contentInstructionFont.companionMargin {
+    margin-top: 23px;
+    margin-bottom: 24px;
+}
+.contentInstructionFont.durationMargin {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.wizardContentContainer {
+    padding-top: 32px !important;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+    label.item.item-input,
+    span.item.item-input {
+        padding-top: 55px;
+        padding-left: 0px;
+    }
+    .item {
+        border-left: none;
+        border-right: none;
+        background-color: $aliveBackground;
+    }
+    .item:first-child {
+        border-top: none;
+    }
+    div.row {
+        padding: 0px;
+    }
+    div.col {
+        padding: 0px;
+    }
+}
+.wizardFooterContainer {
+     padding: 0px 32px 0px 32px !important;
+     background-color: $aliveBackground !important;
+}
+.bar-footer {
+    background-position: bottom !important; // remove border on top of footer
+}
+.wizardFooterContainer.bar {
+    height: 128px !important;
+}
+.wizardSubFooter.bar.bar-subfooter {
+    @extend .wizardFooterContainer;
+    height: 83px !important;
+}
+.wizardMainFooter.bar.bar-footer {
+    @extend .wizardFooterContainer;
+    height: 83px !important;
+}
+.ion-ios-contact:before {
+    content: url('../../img/buddy_icon.svg') !important;
+}
+.ion-ios-telephone:before {
+    content: url('../../img/phone_icon.svg') !important;
+}
+.ion-ios-plus-outline:before {
+    content: url('../../img/plus_icon.svg') !important;
+}
+.ion-search:before {
+    content: url('../../img/Search.svg') !important;
+}
+.btnPlusMinusContainer {
+    height: 239px;
+    line-height: 239px;
+}
+.btnPlusMinus {
+    @extend .h1Light;
+    background-color: $primaryColor;
+    width: 50px;
+    height: 49px;
+    border: none;
+    moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.durationTextMargin {
+    height: 239px;
+    line-height: 239px;
+}
+.durationCheckoutMargin {
+    margin-top: 30px;
+}
+
+/* Checkin map */
+
+.scroll {
+  height: 100%;
+}
+.mapCheckInContainer {
+    p {
+        margin: 0px;
+    }
+    .mapStepMargin {
+        height: 16px;
+        margin-top: 32px;
+    }  
+    .mapInstructionMargin {
+        height: 58px;
+        margin-top: 23px;
+    }
+    .checkinMap {
+        width: 100%;
+        height: calc(100% - 32px - 16px - 58px - 23px - 32px);
+        margin-top: 32px;
+     } 
+}
+
+/* Profile screen */
+.profileContainer {
+    @extend .contentContainer;
+    text-align: center;
+    label.item.item-input {
+        padding-top: 55px;
+        padding-left: 0px;
+    }
+    .item {
+        border-left: none;
+        border-right: none;
+        background-color: $aliveBackground;
+    }
+    .item:first-child {
+        border-top: none;
+        padding-top: 33px !important;
+    }
+}
+
+/* Map Screen */
+.mapContainer {
+    background-color: $aliveLightGrey;
+    .list-inset {
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+    }
+    .item-input {
+        border: none;
+        height: 28px;
+    }
+    .searchInput {
+        font-family: $aliveFontLight !important;
+        font-size: 14.5px !important;
+        color: #8E8E93 !important;
+        height: 18px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .searchInput::-webkit-input-placeholder {
+        color: #8E8E93 !important;
+    }
+    .searchInput::-moz-placeholder {
+        color: #8E8E93 !important;
+    }
+    .fishingMap {
+        width: 100%;
+        height: calc(100% - 10px - 6px - 28px - 5px);
+    }
+    .item {
+        padding: 12px 16px 12px 16px;
+    } 
+}
+
+.mapDetailsContainer{
+    padding-top: 37px !important;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 32px;
+    @extend .regularDarkFont16;
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+/* weather screen */
+.weatherContainer{
+    .item{
+        padding: 30px 16px 30px 16px !important;
+    }
+    .weatherAlertSummary {
+        background-color: #ffd520;
+    }
+    .chevronIcon{
+        color: $aliveDark !important;
+    }
+    .warningText {
+        height: 29px;
+        line-height: 29px;
+        vertical-align: middle;
+        padding-left: 12px;
+    }
+    .warningImage {
+        line-height: 29px;
+        vertical-align: middle;
+    }
+    .dayTitle {
+        @extend .regularDarkFont14;
+        background-color: #EEEEEE;
+        margin-bottom: 0px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 22px;
+    }
+    .weatherSummaryContainer{
+        padding-top: 17px;
+        padding-left: 22px;
+        padding-bottom: 17px;
+        .summaryContainer{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+        .tideHeadings {
+            margin-top: 26px;
+            @extend .fontStyle;
+	        font-family: $aliveFontMedium !important;
+	        font-size: 14px !important;
+            color: $aliveDark;
+        }
+        .waveHeadings {
+            margin-top: 15px;
+            @extend .fontStyle;
+	        font-family: $aliveFontMedium !important;
+	        font-size: 14px !important;
+            color: $aliveDark;
+        }
+        .weatherDivider{
+            margin: 0px;
+            color: #E5E5E5;
+        }
+        .tidesContainer {
+            padding-left: 21px;
+            padding-top:7px;
+            padding-bottom: 7px;
+            @extend .fontStyle;
+	        font-family: $aliveFontMedium !important;
+	        font-size: 12px !important;
+            color: #2C2D2E;
+        }
+        .lowTide{
+            color: $aliveGreen;
+        }
+        .highTide{
+            color: $aliveRed;
+        }
+        .weatherTime{
+            color: $aliveDarkGrey;
+        }
+        .miniParagraph{
+            margin-bottom: 0px;
+            height: 17px;
+        }
+        .messageParagraph{
+            margin-top: 19px;
+            margin-bottom: 20px;
+            padding-right: 22px;
+            @extend .fontStyle;
+            font-family: $aliveFont !important;
+            font-size: 16px !important;
+            color: #2C2D2E;
+            line-height: 18px;
+        }
+    }
+    .weatherImage{
+        line-height: 62px;
+        vertical-align: middle;       
+    }
+    .weatherTemperature{
+        @extend .fontStyle;
+        font-family: $aliveFont !important;
+        font-size: 50px !important;
+        font-weight: bold;
+        color: $aliveDark;
+        margin-left: 17px;
+        height: 62px;
+        line-height: 62px;
+        vertical-align: middle;
+    }
+    .weatherSummary{
+        @extend .h1Dark;
+        margin-left: 30px;
+        margin-top: 30px;
+        vertical-align: middle;
+    }
+}
+
+.weatherAlertContainer{
+    .item{
+        padding: 18px 16px 19px 61px !important;
+    }
+    .dayTitle {
+        @extend .regularDarkFont14;
+        background-color: #EEEEEE;
+        margin-bottom: 0px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 22px;
+    }
+    .item-thumbnail-left, .item-thumbnail-left .item-content{
+        min-height: 86px;
+    }
+    p {
+        margin-bottom: 0px;  
+    }
+    .listItem {
+        @extend .regularDarkFont16;
+        white-space: normal;
+    }
+    .warningAlertImage{
+        max-height: 24px !important;
+        max-width: 27px !important;
+        margin-left: 11px; //21px -10px
+        margin-top: 17px; //27px - 10px
+    }
+}
+
+.weatherSearchContainer {
+    background-color: $aliveLightGrey;
+    .list-inset {
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+    }
+    .item-input {
+        border: none;
+        height: 28px;
+    }
+    .searchInput {
+        font-family: $aliveFontLight !important;
+        font-size: 14.5px !important;
+        color: #8E8E93 !important;
+        height: 18px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .searchInput::-webkit-input-placeholder {
+        color: #8E8E93 !important;
+    }
+    .searchInput::-moz-placeholder {
+        color: #8E8E93 !important;
+    }
+    .item-complex .item-content {
+        padding: 12px 49px 12px 16px;
+    }
+    .locationImage{
+        max-height: 18px !important;
+        max-width: 14px !important;
+    }
+}
+
+/* emergency screen */
+.emergencyContainer{
+    @extend .contentContainer;
+    p {
+        margin-bottom: 0px;
+    }
+    .positionTitle {
+        @extend .fontStyle;
+        font-family: $aliveFont !important;
+        font-size: 16px !important;
+        color: #2C2D2E;
+        line-height: 18px;
+    }
+    .positionDescription {
+        @extend .fontStyle;
+        font-family: $aliveFont !important;
+        font-size: 42px !important;
+        color: $aliveDark;
+        line-height: 50px;
+        margin-top: 22px;
+    }
+    .emergencyGuide {
+        @extend .fontStyle;
+        font-family: $aliveFontLight !important;
+        font-size: 18px !important;
+        color: $aliveDark;
+        line-height: 21px;
+        margin-top: 31px;
+    }
+    .longitudeMargin{
+        margin-top: 39px;
+    }
+}
+
+/* term and condition */
+.termContainer{
+    @extend .contentContainer;
+    @extend .regularDarkFont16;
+    margin-bottom: 84px !important;
+    p, li {
+        margin-bottom: 0px;
+    }
+}
+
+/* about and safety tips */
+.aboutContainer{
+    @extend .contentContainer;
+    @extend .regularDarkFont16;
+    p, li {
+        margin-bottom: 0px;
+    }    
+    .aboutIcon {
+        width: 58px;
+        height: 84px;
+    }
+    .aboutIconContainer {
+        margin-bottom: 24px;
+    }
+    .boldTitle {
+        font-weight: bold;
+    }
+}
+
+/* Android specific class */
+.platform-ios{
+
+}
+
+.platform-android {
+    .weatherContainer{
+        padding-top: 22px !important;
+    }
+    .weatherSearchContainer{
+        padding-top: 20px !important;
+    }
+    .mapContainer {
+        .list-inset {
+            margin-top: 30px;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+        }
+        .fishingMap {
+            width: 100%;
+            height: calc(100% - 30px - 6px - 28px - 5px);
+        } 
+    }
+}
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+

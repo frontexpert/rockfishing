@@ -1,0 +1,64 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToHome()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Weather
+			</div>
+			<div class="col-25 text-right">
+                <a ng-click="goToWeatherSearch()">{{weatherRegion.location}}</a>
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="weatherContainer">
+		<ion-list id="warningList" ng-if="weatherRegion != null && weatherRegion.weather_alerts.length > 0">
+			<a class="item item-icon-right weatherAlertSummary" ng-click="goToWeatherAlert()">
+				<img src="img/weather_warning_red_icon.svg" class="warningImage" />
+				<span class="h1Dark warningText">{{weatherRegion.weather_alerts.length}} Alerts in {{weatherRegion.location}}</span>
+				<i class="icon ion-chevron-right icon-accessory chevronIcon"></i>
+			</a>
+		</ion-list>
+		<p ng-repeat-start="item in weatherRegion.all_forecasts" class="dayTitle">{{ item.dateTitle }}</p>
+		<div ng-repeat-end class="weatherSummaryContainer">
+			<div class="summaryContainer" ng-click="toggleSelected($index)">
+                <span ng-switch="item.weather_code">
+                    <img ng-switch-when="1" src="img/weather_clear_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="2" src="img/weather_clear_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="3" src="img/weather_partcloudy_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="4" src="img/weather_cloudy_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="6" src="img/weather_hazy_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="8" src="img/weather_lightrain_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="9" src="img/weather_wind_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="10" src="img/weather_fog_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="11" src="img/weather_shower_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="12" src="img/weather_shower_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="13" src="img/weather_dusty_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="14" src="img/weather_frost_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="15" src="img/weather_snow_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="16" src="img/weather_storm_icon.svg" class="weatherImage" />
+                    <img ng-switch-when="17" src="img/weather_shower_icon.svg" class="weatherImage" />
+                    <img ng-switch-default src="img/weather_unknown_icon.svg" class="weatherImage" />
+                </span>
+				<span class="weatherTemperature">{{item.temperature}}<sup>o</sup></span>
+				<span class="weatherSummary">{{item.weather_summary}}</span>
+			</div>
+			<span ng-show="item.selected == true">
+				<p class="miniParagraph tideHeadings">Tides</p>
+				<hr class="weatherDivider"/>
+				<div class="row tidesContainer">
+					<div class="col-25" ng-repeat="tide in item.tides">
+						<p class="miniParagraph">{{tide.height}}</p>
+						<p class="miniParagraph weatherTime">{{tide.time}}</p>
+						<p class="miniParagraph" ng-class="{'lowTide':tide.state === 'LOW', 'highTide':tide.state === 'HIGH'}">{{tide.state}}</p>
+					</div>
+				</div>
+				<p class="miniParagraph waveHeadings">Wave Heights</p>
+				<hr class="weatherDivider"/>
+				<wavesview></wavesview>
+				<p class="messageParagraph">{{item.message}}</p>
+			</span>
+		</div>
+	</ion-content>
+</ion-view>

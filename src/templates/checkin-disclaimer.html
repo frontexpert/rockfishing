@@ -1,0 +1,25 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+    <ion-header-bar class="bar-positive headerContainer">
+        <div class="row">
+            <div class="col-25">
+                <a ng-click="backToPrevious()">Back</a>
+            </div>
+            <div class="col-50 text-center headerTitle">
+                Disclaimer
+            </div>
+            <div class="col-25">
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="contentContainer">
+        <p>
+            You agree that this application is intended to be used only as a local monitoring tool and should not be used as your only
+            communications safety device. It is also not intended to replace any safety device required to be carried under
+            any legislation. Surf Life Saving Sydney cannot guarantee uninterrupted connectivity between your mobile device,
+            GPS and mobile phone towers. It is strongly recommended that you always inform an on shore contact regarding
+            the details of your fishing trip, which should include a Location and return time.</p>
+    </ion-content>
+    <ion-footer-bar class="wizardFooterContainer">
+        <button class="btnSubMenu" ng-click="goToProfile()">Accept</button>
+    </ion-footer-bar>
+</ion-view>

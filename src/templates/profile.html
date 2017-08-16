@@ -1,0 +1,31 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+    <ion-header-bar class="bar-positive headerContainer">
+        <div class="row">
+            <div class="col-25">
+                <a ng-click="backToHome()">Back</a>
+            </div>
+            <div class="col-50 text-center headerTitle">
+                {{getProfileTitle()}}
+            </div>
+            <div class="col-25">
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="profileContainer">
+        <p ng-if="isSignUp == true" class="contentInstructionFont signUpMargin text-center">Please enter your details to create your profile.</p>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Full Name" class="formText" ng-model="user.name">
+                <i class="icon ion-ios-contact placeholder-icon"></i>
+            </label>
+            <label class="item item-input">
+                <input type="tel" placeholder="Mobile (e.g. 0477436824)" class="formText" ng-model="user.mobileNumber">
+                <i class="icon ion-ios-telephone placeholder-icon"></i>
+            </label>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="wizardFooterContainer">
+        <button ng-if="isSignUp == true" class="btnSubMenu" ng-click="signUp()">Sign Up</button>
+        <button ng-if="isSignUp == false" class="btnSubMenu" ng-click="editProfile()">Edit</button>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<!--<ion-header-bar class="bar-positive headerContainer" ng-init="init()">-->
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToPrevious()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Location
+			</div>
+			<div class="col-25 text-right">
+				<a ng-click="updateLocation()">Next</a>
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="mapCheckInContainer">
+		<div class="wizardStepText mapStepMargin">
+			<p class="text-center"></p>
+		</div>
+		<div class="wizardStepText mapInstructionMargin">
+			<p class="contentInstructionFont text-center">Please confirm your
+				<br/>new location</p>
+		</div>
+		<leaflet id="checkinMap" class="checkinMap" resizeable markers="markers" paths="paths" center="center" event-broadcast="events" data-tap-disabled="true" defaults="defaults" layers="layers"></leaflet>
+	</ion-content>
+</ion-view>

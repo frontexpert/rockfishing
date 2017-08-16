@@ -1,0 +1,17 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+    <ion-header-bar class="bar-positive headerContainer">
+        <div class="row">
+            <div class="col-25">
+                <a ng-click="backToHome()">Back</a>
+            </div>
+            <div class="col-50 text-center headerTitle">
+                {{fishingSpot.name}}
+            </div>
+            <div class="col-25 text-right">
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="mapDetailsContainer">
+        <p>{{fishingSpot.details}}</p>
+    </ion-content>
+</ion-view>

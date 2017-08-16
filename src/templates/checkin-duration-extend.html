@@ -1,0 +1,34 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToPrevious()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Duration
+			</div>
+			<div class="col-25">
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="wizardContentContainer">
+		<p class="wizardStepText text-center"></p>
+		<p class="contentInstructionFont text-center durationMargin">How many additional hours
+			<br/>will you be fishing?</p>
+		<div class="row">
+			<div class="col-25 btnPlusMinusContainer">
+				<button class="btnPlusMinus ion-minus text-center" ng-click="reduceDuration()"></button>
+			</div>
+			<div class="col-50 durationText durationTextMargin">
+				{{ getDuration() }}
+			</div>
+			<div class="col-25 btnPlusMinusContainer">
+				<button class="btnPlusMinus ion-plus text-center" ng-click="addDuration()"></button>
+			</div>
+		</div>
+		<p class="regularDarkFont16 durationCheckoutMargin">Check out time: {{ getCheckOutTime() }}</p>
+	</ion-content>
+	<ion-footer-bar class="wizardFooterContainer">
+		<button class="btnSubMenu" ng-click="update()">Update</button>
+	</ion-footer-bar>
+</ion-view>

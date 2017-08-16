@@ -1,0 +1,26 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+    <ion-header-bar class="bar-positive headerContainer">
+        <div class="row">
+            <div class="col-25">
+                <a ng-click="backToHome()">Back</a>
+            </div>
+            <div class="col-50 text-center headerTitle">
+                Weather Alerts
+            </div>
+            <div class="col-25 text-right">
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="weatherAlertContainer">
+        <p class="dayTitle">Today</p>
+        <ion-list id="weatherAlertList">
+            <span ng-repeat="item in currentAlerts ">
+				<a class="item item-thumbnail-left" href>
+                    <img src="img/weather_warning_icon.svg" class="warningAlertImage" />
+					<p class="listItem">{{item.title}}</p>
+					<p class="listItem">{{item.areas}}!</p>
+				</a>
+			</span>
+        </ion-list>
+    </ion-content>
+</ion-view>

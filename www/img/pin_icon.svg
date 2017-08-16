@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (381) - http://www.bohemiancoding.com/sketch -->
+    <title>pin_ico</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Toolkit-&amp;-Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Global-Style" sketch:type="MSArtboardGroup" transform="translate(-1052.000000, -1186.000000)">
+            <rect id="BG" fill="#FAFAFA" sketch:type="MSShapeGroup" x="285" y="322" width="1200" height="1393"></rect>
+            <rect id="Rectangle-44" fill="#F7F7F7" sketch:type="MSShapeGroup" x="688" y="1000" width="445" height="522"></rect>
+            <g id="Icons" sketch:type="MSLayerGroup" transform="translate(708.000000, 946.000000)" fill="#FFFFFF">
+                <path d="M349.395787,240 C346.420133,240 344,242.42088 344,245.395787 C344,248.331493 349.12456,253.747627 349.342587,253.976667 C349.3564,253.991973 349.37544,254 349.395787,254 C349.416133,254 349.435173,253.991973 349.448987,253.977413 C349.667013,253.748373 354.791573,248.33224 354.791573,245.396533 C354.791573,242.42088 352.37144,240 349.395787,240 L349.395787,240 Z M349.395787,242.082453 C351.058987,242.082453 352.41232,243.435787 352.41232,245.098987 C352.41232,246.762373 351.058987,248.115707 349.395787,248.115707 C347.732587,248.115707 346.38,246.762373 346.38,245.098987 C346.38,243.43504 347.732587,242.082453 349.395787,242.082453 L349.395787,242.082453 Z" id="pin_ico" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

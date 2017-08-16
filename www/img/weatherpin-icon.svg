@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="30px" viewBox="0 0 24 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4.4 (395) - http://www.bohemiancoding.com/sketch -->
+    <title>weatherpin_ico</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Toolkit-&amp;-Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Global-Style" sketch:type="MSArtboardGroup" transform="translate(-893.000000, -1368.000000)" fill="#0D65AD">
+            <g id="Icons" sketch:type="MSLayerGroup" transform="translate(708.000000, 946.000000)">
+                <path d="M196.5624,422 C190.186,422 185,427.1876 185,433.5624 C185,439.8532 195.9812,451.4592 196.4484,451.95 C196.478,451.9828 196.5188,452 196.5624,452 C196.606,452 196.6468,451.9828 196.6764,451.9516 C197.1436,451.4608 208.1248,439.8548 208.1248,433.564 C208.1248,427.1876 202.9388,422 196.5624,422 L196.5624,422 Z M196.5624,426.4624 C200.1264,426.4624 203.0264,429.3624 203.0264,432.9264 C203.0264,436.4908 200.1264,439.3908 196.5624,439.3908 C192.9984,439.3908 190.1,436.4908 190.1,432.9264 C190.1,429.3608 192.9984,426.4624 196.5624,426.4624 L196.5624,426.4624 Z" id="weatherpin_ico" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

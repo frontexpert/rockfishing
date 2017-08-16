@@ -1,0 +1,33 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+	<!--<ion-header-bar class="bar-positive headerContainer" ng-init="init()">-->
+	<ion-header-bar class="bar-positive headerContainer">
+		<div class="row">
+			<div class="col-25">
+				<a ng-click="backToPrevious()">Back</a>
+			</div>
+			<div class="col-50 text-center headerTitle">
+				Location
+			</div>
+			<div class="col-25 text-right">
+				<a ng-click="goToLocationTracking()">Next</a>
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content class="mapCheckInContainer">
+		<div class="wizardStepText mapStepMargin">
+			<p class="text-center">Step 2 of 5</p>
+		</div>
+		<div class="wizardStepText mapInstructionMargin">
+			<p class="contentInstructionFont text-center">Where will you be
+				<br/>fishing today?</p>
+		</div>
+		<!--<div id="map" data-tap-disabled="true"></div>-->
+		<!--<div class="range" data-tap-disabled="true">
+			on
+			<input type="range" name="volume" min="50" max="5000" ng-model="paths.circle.radius"> {{ paths.circle.radius }}m
+		</div>-->
+		<!--<div style="width: 100%; position: absolute; top: 140px; bottom: 0px;" data-tap-disabled="true">-->
+		<leaflet id="checkinMap" class="checkinMap" resizeable markers="markers" paths="paths" center="center" event-broadcast="events" data-tap-disabled="true" defaults="defaults" layers="layers"></leaflet>
+		<!--</div>-->
+	</ion-content>
+</ion-view>

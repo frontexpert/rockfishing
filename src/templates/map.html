@@ -1,0 +1,29 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+    <ion-header-bar class="bar-positive headerContainer">
+        <div class="row">
+            <div class="col-25">
+                <a ng-click="backToHome()">Back</a>
+            </div>
+            <div class="col-50 text-center headerTitle">
+                Map
+            </div>
+            <div class="col-25">
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content class="mapContainer">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon text-center"></i>
+                <input type="text" placeholder="Search" class="searchInput text-center" ng-model="searchText.suburb" ng-change="updateList()">
+            </label>
+        </div>
+        <ion-list style="position:absolute; z-index: 30;">
+            <ion-item ng-repeat="location in locationList" ng-click="selectLocation(location)">
+                {{location.formatted_address}}
+            </ion-item>
+        </ion-list>
+        <leaflet id="fishingMap" class="fishingMap" style="position: absolute; z-index: 10" resizeable markers="markers" paths="paths" center="center" event-broadcast="events"
+        defaults="defaults" data-tap-disabled="true" layers="layers"></leaflet>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>plus_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Toolkit-&amp;-Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Global-Style" sketch:type="MSArtboardGroup" transform="translate(-1046.000000, -1119.000000)" fill="#0079FF">
+            <g id="Icons" sketch:type="MSLayerGroup" transform="translate(708.000000, 946.000000)">
+                <path d="M349,195 C355.075132,195 360,190.075132 360,184 C360,177.924868 355.075132,173 349,173 C342.924868,173 338,177.924868 338,184 C338,190.075132 342.924868,195 349,195 Z M349,194 C354.522847,194 359,189.522847 359,184 C359,178.477153 354.522847,174 349,174 C343.477153,174 339,178.477153 339,184 C339,189.522847 343.477153,194 349,194 Z M349.496159,183.509369 L349.496159,178.5 L348.502995,178.5 C348.504299,180.197209 348.502995,183.509369 348.502995,183.509369 L343.496098,183.509369 L343.496098,184.507691 L348.502995,184.507691 L348.502995,189.498535 L349.496159,189.498535 L349.496159,184.507691 L354.496098,184.50769 L354.496098,183.509369 L349.496159,183.509369 Z" id="plus_icon" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
